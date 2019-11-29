@@ -1,0 +1,35 @@
+<p>
+  moj-komponent works!
+  {{ 2+2 }}
+</p>
+<p>
+  Title: {{ title | uppercase | myPipe }}
+</p>
+<p>
+  Zenek: {{ zenek.imie | uppercase }}
+</p>
+<p>
+  Zenek: {{ zenek | json }}
+</p>
+<p>
+  Zenek: {{ printZenek() }}
+</p>
+<div>
+  <button (click)="onClick()">Kliknij mnie</button>
+</div>
+<div>
+  <app-dziecko imie='Henryk' nazwisko='Malina'></app-dziecko>
+  <app-dziecko imie='Dzesika' nazwisko='Kowalska'></app-dziecko>
+</div>
+<div>
+  {{ 120*3 | currency }}
+  <br/>
+  {{ 667 | currency:'PLN'}}
+</div>
+<div>
+  <!-- <h3 *ngIf="!czyWyswietlac" >Ho ho - to bedzie widac</h3> -->
+  <ul>
+    <li *ngFor='let item of warzywa'>{{item}}</li>
+  </ul>
+
+</div>

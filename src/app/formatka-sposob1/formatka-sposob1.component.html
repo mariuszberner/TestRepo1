@@ -1,0 +1,37 @@
+<div> {{osoba | json}} </div>
+<div>
+  valid:
+  {{forma.valid}}
+  <br/>
+  touched:
+  {{forma.touched}}
+  <br/>
+  dirty:
+  {{forma.dirty}}
+  <br/>
+  pristine:
+  {{forma.pristine}}
+  <br/>
+</div>
+<div class="container">
+    <h1>Hero Form</h1>
+    <form (ngSubmit)="onSubmit()" #forma="ngForm">
+      <div class="form-group">
+        <label>Id</label>
+        <input type="text" class="form-control" [(ngModel)]="osoba.id" name="id" required>
+      </div>
+
+      <div class="form-group">
+        <label>Imie</label>
+        <input type="text" class="form-control" [(ngModel)]="osoba.imie" name="imie">
+      </div>
+
+      <div class="form-group">
+          <label>Nazwisko</label>
+          <input type="text" class="form-control" [(ngModel)]="osoba.nazwisko" name="nazwisko">
+        </div>
+
+      <button type="submit" class="btn btn-success">Save</button>
+
+    </form>
+</div>

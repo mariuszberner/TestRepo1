@@ -1,0 +1,30 @@
+<p>
+  <app-post-details [post]="selectedPost"></app-post-details>
+</p>
+<div>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">UserID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let post of posts'>
+          <th scope="row">{{ post.id }}</th>
+          <td>{{post.userId}}</td>
+          <td>{{post.title}}</td>
+          <td>
+            <button class="btn btn-primary" (click)="onSelect(post)">Details</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  <!-- <ul>
+    <li *ngFor='let post of posts'>{{post.id}}, {{post.title}}</li>
+  </ul> -->
+</div>
